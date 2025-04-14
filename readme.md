@@ -39,8 +39,8 @@ The portfolio features recent projects including:
 
 I'm open to collaboration, freelance work, or full-time opportunities. Feel free to reach out through:
 
-- **Email:** [email@exemplo.com](nardisabela@gmail.com)  
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/isabelans/)  
+- **Email:** [nardisabela@gmail.com](nardisabela@gmail.com)  
+- **LinkedIn:** [LinkedIn](https://www.linkedin.com/in/isabelans/)  
 - **GitHub:** [@nardisabela](https://github.com/nardisabela)
 
 ---
