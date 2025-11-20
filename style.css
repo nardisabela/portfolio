@@ -221,7 +221,7 @@ header {
 /* About Section */
 .about-grid {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 25fr 2fr;
     gap: var(--space-xl);
     align-items: center;
 }
@@ -555,3 +555,4 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+
