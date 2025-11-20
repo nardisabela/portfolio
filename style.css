@@ -1,4 +1,6 @@
-/* ===== [ 1. VARIABLES ] ===== */
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
 :root {
     /* Colors */
     --primary: #7F5AF0;
@@ -6,12 +8,12 @@
     --accent: #FF8E3C;
     --dark: #0F0F0F;
     --light: #F4F4F4;
-    --text: #1E1E1E;
-    --text-light: #666666;
+    --text: #F4F4F4;
+    --text-light: #C5C5C5;
     --card-bg: rgba(255, 255, 255, 0.05);
     --tag-bg: rgba(127, 90, 240, 0.1);
     --tag-text: var(--primary);
-    
+
     /* Spacing */
     --space-xxs: 0.25rem;
     --space-xs: 0.5rem;
@@ -20,16 +22,16 @@
     --space-lg: 1.5rem;
     --space-xl: 2rem;
     --space-xxl: 3rem;
-    
+
     /* Typography */
     --font-body: 'Inter', sans-serif;
     --font-heading: 'Playfair Display', serif;
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
-    
+
     /* Border Radius */
     --radius-sm: 4px;
     --radius-md: 8px;
@@ -38,7 +40,9 @@
     --radius-full: 50px;
 }
 
-/* ===== [ 2. RESET & BASE STYLES ] ===== */
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -52,10 +56,10 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--text);
-    line-height: 1.6;
     background-color: var(--light);
     overflow-x: hidden;
     font-size: 1.05rem;
+    line-height: 1.6;
     letter-spacing: 0.3px;
 }
 
@@ -74,7 +78,9 @@ a {
     color: inherit;
 }
 
-/* ===== [ 3. LAYOUT & GRID ] ===== */
+/* ==========================================================================
+   LAYOUT & GRID
+   ========================================================================== */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -92,7 +98,9 @@ a {
     gap: var(--space-lg);
 }
 
-/* ===== [ 4. TYPOGRAPHY ] ===== */
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     line-height: 1.2;
@@ -128,88 +136,38 @@ h3 {
     max-width: 600px;
 }
 
-/* ===== [ 5. COMPONENTS ] ===== */
-/* Background Art */
-.bg-art {
+.text-center {
+    text-align: center;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 30%, rgba(127, 90, 240, 0.08), transparent 50%);
-    z-index: -1;
-}
-
-/* Buttons */
-.btn {
-    display: inline-flex;
+    padding: 15px 30px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-md) var(--space-lg);
-    border-radius: var(--radius-full);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 100;
 }
 
-.btn-primary {
-    background: var(--primary);
+.navbar.show {
+    transform: translateY(0);
+}
+
+.navbar a {
     color: white;
+    margin-left: 20px;
 }
 
-.btn-primary:hover {
-    background: var(--secondary);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-}
-
-.btn-demo {
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--dark);
-    padding: var(--space-sm) var(--space-md);
-    font-size: 0.9rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-}
-
-.btn-demo:hover {
-    background: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-demo i {
-    font-size: 0.8rem;
-    margin-left: var(--space-xxs);
-}
-
-.btn-magnetic {
-    background: var(--primary);
-    color: white;
-}
-
-.btn-magnetic:hover {
-    background: var(--secondary);
-    transform: translateY(-3px);
-}
-
-/* Cards */
-.card {
-    background: white;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-/* Navigation */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -220,13 +178,12 @@ h3 {
 
 .nav-list {
     display: flex;
-    justify-content: flex-end; /* Aligns the nav items to the right */
-    width: 100%; /* Takes full width to allow right alignment */
+    justify-content: flex-end;
     gap: var(--space-lg);
+    width: 100%;
 }
 
 .nav-link {
-    color: var(--text);
     position: relative;
     padding: var(--space-xs) 0;
     font-weight: 500;
@@ -248,22 +205,10 @@ h3 {
     width: 100%;
 }
 
-/* Section Header */
-.section-header {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-xl);
-}
-
-.section-number {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--accent);
-}
-
-/* ===== [ 6. SECTIONS ] ===== */
-/* Header/Hero */
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+/* Hero Section */
 header {
     padding: var(--space-xl) 0 var(--space-xxl);
 }
@@ -292,7 +237,7 @@ header {
     box-shadow: var(--shadow-lg);
 }
 
-/* Skills */
+/* Skills Section */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -305,18 +250,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     width: 120px;
     padding: 1rem;
     background-color: #fff;
     border-radius: 1rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
 }
 
 .skill-icon {
@@ -366,7 +310,6 @@ header {
 }
 
 .project-img {
-    position: relative;
     height: 220px;
     overflow: hidden;
 }
@@ -388,7 +331,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0,0,0,0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -418,8 +361,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-xs);
-    list-style: none;
-    padding: 0;
 }
 
 .project-tech li {
@@ -429,94 +370,6 @@ header {
     border-radius: var(--radius-full);
     font-size: 0.8rem;
     font-weight: 500;
-}
-
-/* Bonus/Game Section */
-.game-container {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.room {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-color: #e0e0e0;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-}
-
-.character {
-    /background-image: url('img/bonus/idle.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    width: 100px;
-    height: 140px;
-    bottom: 50px;
-    left: 100px;
-    z-index: 10;
-}
-
-.object {
-    position: absolute;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.object:hover {
-    transform: scale(1.05);
-}
-
-.computer {
-    width: 200px;
-    height: 200px;
-    background-image: url('img/bonus/computer.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    bottom: 100px;
-    right: 50px;
-}
-
-.coffee-machine {
-    width: 150px;
-    height: 170px;
-    background-image: url('img/bonus/coffee-machine.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    bottom: 120px;
-    left: 50px;
-}
-
-.notepad {
-    width: 180px;
-    height: 200px;
-    /*background-image: url('img/bonus/drawing.png');*/
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    bottom: 100px;
-    left: 300px;
-}
-
-.book {
-    width: 240px;
-    height: 260px;
-    background-image: url('img/bonus/book.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 3px;
-    bottom: 100px;
-    right: 300px;
 }
 
 /* Contact Section */
@@ -564,7 +417,9 @@ footer {
     color: var(--light);
 }
 
-/* ===== [ 7. UTILITIES ] ===== */
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
 .bg-dark {
     background-color: var(--dark);
     color: var(--light);
@@ -574,26 +429,22 @@ footer {
     color: var(--light);
 }
 
-.text-center {
-    text-align: center;
-}
-
-/* ===== [ 8. ANIMATIONS ] ===== */
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
 @keyframes pulse {
     0% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.05); opacity: 0.7; }
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* ===== [ 9. MEDIA QUERIES ] ===== */
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
 @media (max-width: 768px) {
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .about-img {
-        order: -1;
     }
     
     .projects-grid {
@@ -612,23 +463,95 @@ footer {
     .nav-list {
         margin-top: var(--space-md);
     }
-    
-    .room {
-        height: 400px;
-    }
-    
-    .character, .object {
-        transform: scale(0.8);
-    }
 }
 
-/* Show bonus section only on desktop */
-.desktop-only {
-    display: none;
-}
+ body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #111; /* Dark background makes elements visible */
+  }
 
-@media (min-width: 1024px) {
-    .desktop-only {
-        display: block;
-    }
-}
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 100;
+  }
+
+  .navbar.show {
+    transform: translateY(0);
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  /* Floating background elements */
+  .background-element {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    pointer-events: none; /* So they don’t block clicks */
+    animation: float linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); opacity: 0.5; }
+    50% { transform: translateY(-50px) translateX(20px); opacity: 1; }
+    100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+  }
+
+  /* Parallax Section */
+  .parallax {
+    background-image: url('your-image.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+  }
+
+  .content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
