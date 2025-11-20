@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Tags -->
+    <!-- ==============================
+         META TAGS
+    ============================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- SEO Metadata -->
+
+    <!-- ==============================
+         SEO METADATA
+    ============================== -->
     <title>Isabela Nardi | UI/UX Designer & Front-End Developer | Instructional Design | eLearning</title>
     <meta name="description" content="Portfolio of Isabela Nardi, a UI/UX Designer and Front-End Developer with a background in Instructional Design and eLearning.">
     <meta name="keywords" content="portfolio, front-end, developer, UI/UX, design, web, Moodle, eLearning, HTML, CSS, JavaScript">
     <meta name="author" content="Isabela Nardi">
     <link rel="icon" href="img/code.png" type="image/x-icon">
 
-    <!-- Open Graph / Social Media Metadata -->
+    <!-- ==============================
+         OPEN GRAPH / SOCIAL MEDIA
+    ============================== -->
     <meta property="og:title" content="Isabela Nardi | UI/UX Designer & Developer">
     <meta property="og:description" content="Explore Isabela Nardi's portfolio. Experience in UI/UX, front-end development, eLearning, Moodle, and Instructional Design.">
     <meta property="og:type" content="website">
@@ -25,353 +31,309 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@yourtwitterhandle">
 
-    <!-- Preload Resources -->
+    <!-- ==============================
+         FONTS & CSS
+    ============================== -->
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" as="style">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nardisabela.github.io">
 </head>
 
 <body>
-    <!-- Decorative Background Element -->
-    <div class="bg-art" aria-hidden="true"></div>
+    <!-- ==============================
+         NAVBAR
+    ============================== -->
+    <div class="navbar" id="navbar">
+      <div class="logo">Isabela Nardi</div>
+      <div class="nav-list">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#About" class="nav-link">About</a>
+        <a href="#Projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
 
-    <!-- Header / Hero Section -->
-    <header>
+    <!-- ==============================
+         HERO / PARALLAX SECTION
+    ============================== -->
+    <section class="parallax" aria-label="Hero Section">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1><span class="text-gradient">Transforming ideas</span> into experiences</h1>
+            <p class="subtitle">Hello, I am Isabela! I am a UI/UX Designer and Front-End Developer, specialized in eLearning and Instructional Design.</p>
+        </div>
+    </section>
+
+    <!-- ==============================
+         ABOUT SECTION
+    ============================== -->
+  </br></br>
+    <section id="About" aria-labelledby="about-heading">
         <div class="container">
-            <nav class="nav-list">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
+            <div class="section-header">
+                <h2 id="about-heading"><span class="text-gradient">My Journey</span></h2>
+            </div>
             
-            <div class="hero">
-                <h1><span class="text-gradient">Transforming ideas</span> into experiences</h1>
-                <p class="subtitle">Hello, I am Isabela! I am a UI/UX Designer and Front-End Developer, specialized in eLearning and Instructional Design.</p>
-                <a href="#projects" class="btn btn-magnetic" title="Explore Projects">
-                    <span>Check out my Projects!</span>
-                    <i class="fas fa-arrow-down" aria-hidden="true"></i>
-                </a>
+            <div class="about-grid">
+                <!-- About Text -->
+                <div class="about-text">
+                    <p>With over a decade of experience, <strong>Isabela Nardi</strong> has worked across the fields of <strong>eLearning</strong>, <strong>web development</strong>, and <strong>UI/UX design</strong>. Her background as a <strong>developer</strong>, <strong>educator</strong>, and <strong>researcher</strong> has equipped her with a comprehensive and insightful perspective on digital learning and user-centered design.</p>
+
+                    <p>Currently based in Spain, Isabela is fluent in <strong>Portuguese</strong>, <strong>English</strong>, and <strong>Spanish</strong>, and holds both <strong>Brazilian</strong> and <strong>Spanish</strong> citizenships.</p>
+
+                    <p>She is skilled in a wide variety of tools and technologies, showcased below.</p>
+
+                    <!-- Skills -->
+                    <div class="skills"> 
+                        <div class="skill-item" title="Proficient in HTML and CSS">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5" aria-hidden="true"></i>
+                            </div>
+                            <p>HTML/CSS</p>
+                        </div>
+                        <div class="skill-item" title="Experienced with JavaScript">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square" aria-hidden="true"></i>
+                            </div>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-item" title="Skilled in interface design with Figma">
+                            <div class="skill-icon">
+                                <i class="fab fa-figma" aria-hidden="true"></i>
+                            </div>
+                            <p>Figma</p>
+                        </div>
+                        <div class="skill-item" title="Experienced with Moodle platform">
+                            <div class="skill-icon">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            </div>
+                            <p>Moodle</p>
+                        </div>
+                        <div class="skill-item" title="Proficient in Adobe Photoshop">
+                            <div class="skill-icon">
+                                <i class="fas fa-camera" aria-hidden="true"></i>
+                            </div>
+                            <p>Photoshop</p>
+                        </div>
+                        <div class="skill-item" title="Proficient in Adobe Illustrator">
+                            <div class="skill-icon">
+                                <i class="fas fa-pencil" aria-hidden="true"></i>
+                            </div>
+                            <p>Illustrator</p>
+                        </div>
+                        <div class="skill-item" title="Proficient in Adobe XD">
+                            <div class="skill-icon">
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                            </div>
+                            <p>Adobe XD</p>
+                        </div>
+                        <div class="skill-item" title="Proficient in Unity Game Engine">
+                            <div class="skill-icon">
+                                <i class="fas fa-cube" aria-hidden="true"></i>
+                            </div>
+                            <p>Unity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Image -->
+                <div class="about-img">
+                    <div class="img-frame">
+                        <img src="img/img-b.jpg" 
+                             alt="Illustration of a woman working with a computer" 
+                             loading="lazy">
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
+    </br></br>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-number">01</span>
-                    <h2>My Journey</h2>
-                </div>
-                
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>With over a decade of experience, <strong>Isabela Nardi</strong> has worked across the fields of <strong>eLearning</strong>, <strong>web development</strong>, and <strong>UI/UX design</strong>. Her background as a <strong>developer</strong>, <strong>educator</strong>, and <strong>researcher</strong> has equipped her with a comprehensive and insightful perspective on digital learning and user-centered design.</p>
+    <!-- ==============================
+         PROJECTS SECTION
+    ============================== -->
+    </br></br>
+    <section id="Projects" aria-labelledby="projects-heading">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 id="projects-heading"><span class="text-gradient">Recent Projects</span></h2>
+            </div>
 
-                        <p>Currently based in Spain, Isabela is fluent in <strong>Portuguese</strong>, <strong>English</strong>, and <strong>Spanish</strong>, and holds both <strong>Brazilian</strong> and <strong>Spanish</strong> citizenships.</p>
-
-                        <p>She is skilled in a wide variety of tools and technologies, showcased below.</p>
-
-                        <div class="skills"> 
-                            <div class="skill-item" title="Proficient in HTML and CSS">
-                                <div class="skill-icon">
-                                    <i class="fab fa-html5" aria-hidden="true"></i>
-                                </div>
-                                <p>HTML/CSS</p>
-                            </div>
-                            <div class="skill-item" title="Experienced with JavaScript">
-                                <div class="skill-icon">
-                                    <i class="fab fa-js-square" aria-hidden="true"></i>
-                                </div>
-                                <p>JavaScript</p>
-                            </div>
-                            <div class="skill-item" title="Skilled in interface design with Figma">
-                                <div class="skill-icon">
-                                    <i class="fab fa-figma" aria-hidden="true"></i>
-                                </div>
-                                <p>Figma</p>
-                            </div>
-                            <div class="skill-item" title="Experienced with Moodle platform">
-                                <div class="skill-icon">
-                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                                </div>
-                                <p>Moodle</p>
-                            </div>
-                            <div class="skill-item" title="Proficient in Adobe Creative Suite">
-                                <div class="skill-icon">
-                                    <i class="fas fa-camera" aria-hidden="true"></i>
-                                </div>
-                                <p>Adobe Photoshop</p>
-                            </div>
-                            <div class="skill-item" title="Proficient in Adobe Creative Suite">
-                                <div class="skill-icon">
-                                    <i class="fas fa-pencil" aria-hidden="true"></i>
-                                </div>
-                                <p>Adobe Illustrator</p>
-                            </div>
-                            <div class="skill-item" title="Proficient in Adobe Creative Suite">
-                                <div class="skill-icon">
-                                    <i class="fas fa-user" aria-hidden="true"></i>
-                                </div>
-                                <p>Adobe XD</p>
-                            </div>
-                            <div class="skill-item" title="Proficient in Unity Game Engine">
-                                <div class="skill-icon">
-                                    <i class="fas fa-cube" aria-hidden="true"></i>
-                                </div>
-                                <p>Unity</p>
-                            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="img/projects/heycalorie.png" alt="Screenshot of Hey Calorie app showing calorie tracking interface" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nardisabela.github.io/hey-calorie/" class="project-link" aria-label="View Hey Calorie project">View Live Demo</a>
                         </div>
                     </div>
-                    
-                    <div class="about-img">
-                        <div class="img-frame">
-                            <img src="img/img.jpg" alt="Illustration of woman working with a computer." loading="lazy">
+                    <div class="project-info">
+                        <h3>Hey Calorie!</h3>
+                        <p>Calorie tracker with macro visualization and intuitive UI</p>
+                        <ul class="project-tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>JSON</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="img/projects/bloom.png" alt="Screenshot of Bloom to-do list application" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nardisabela.github.io/bloom/" class="project-link" aria-label="View Bloom project">View Live Demo</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section bg-dark">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-number">02</span>
-                    <h2>Recent Projects</h2>
-                </div>
-                
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <article class="project-card">
-                        <div class="project-img">
-                            <img src="img/projects/heycalorie.png" 
-                                 alt="Screenshot of Hey Calorie app showing calorie tracking interface" 
-                                 loading="lazy">
-                            <div class="project-overlay">
-                                <a href="https://nardisabela.github.io/hey-calorie/" class="project-link" 
-                                   title="View Hey Calorie! project" aria-label="View Hey Calorie project">
-                                    View Live Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Hey Calorie!</h3>
-                            <p>Calorie tracker with macro visualization and intuitive UI</p>
-                            <ul class="project-tech">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>JSON</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- Project 2 -->
-                    <article class="project-card">
-                        <div class="project-img">
-                            <img src="img/projects/bloom.png" 
-                                 alt="Screenshot of Bloom to-do list application" 
-                                 loading="lazy">
-                            <div class="project-overlay">
-                                <a href="https://nardisabela.github.io/bloom/" class="project-link" 
-                                   title="View Bloom! project" aria-label="View Bloom project">
-                                    View Live Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Bloom!</h3>
-                            <p>Interactive To-Do List with relaxing elements for concentration</p>
-                            <ul class="project-tech">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- Project 3 -->
-                    <article class="project-card">
-                        <div class="project-img">
-                            <img src="img/projects/tarsila.png" 
-                                 alt="Screenshot of Tarsila drawing application" 
-                                 loading="lazy">
-                            <div class="project-overlay">
-                                <a href="https://nardisabela.github.io/tarsila/" class="project-link" 
-                                   title="View Tarsila project" aria-label="View Tarsila project">
-                                    View Live Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Tarsila</h3>
-                            <p>Drawing app with multiple creative tools and brushes</p>
-                            <ul class="project-tech">
-                                <li>HTML5 Canvas</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                                <li>Touch Events</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- Project 4 -->
-                    <article class="project-card">
-                        <div class="project-img">
-                            <img src="img/projects/tagarela.png" 
-                                 alt="Screenshot of the ChatBot Tagarela" 
-                                 loading="lazy">
-                            <div class="project-overlay">
-                                <a href="https://nardisabela.github.io/tagarela/" class="project-link" 
-                                   title="View Tagarela project" aria-label="View Tagarela project">
-                                    View Live Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Tagarela</h3>
-                            <p>ChatBot that answers questions about Brazil</p>
-                            <ul class="project-tech">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- Project 5 -->
-                    <article class="project-card">
-                        <div class="project-img">
-                            <img src="img/projects/timezone.png" 
-                                 alt="Screenshot of the TimeZone Converter" 
-                                 loading="lazy">
-                            <div class="project-overlay">
-                                <a href="https://nardisabela.github.io/timezone-converter/" class="project-link" 
-                                   title="View TimeZone Converter project" aria-label="View TimeZone Converter project">
-                                    View Live Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>TimeZone Converter</h3>
-                            <p>A simple timezone converter</p>
-                            <ul class="project-tech">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                        <!-- Project 5 -->
-                    <article class="project-card">
-                        <div class="project-img">
-                            <img src="img/projects/password.png" 
-                                 alt="Screenshot of Password Generator" 
-                                 loading="lazy">
-                            <div class="project-overlay">
-                                <a href="https://nardisabela.github.io/gerador-senha/" class="project-link" 
-                                   title="View Password Generator project" aria-label="View Password Generator project">
-                                    View Live Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Password Generator</h3>
-                            <p>A simple Password Generator, available in Portuguese</p>
-                            <ul class="project-tech">
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                    </article>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- Bonus Section - Desktop Only -->
-        <section id="bonus" class="section desktop-only">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-number">03</span>
-                    <h2>Bonus Section</h2>
-                </div>
-                <div class="bonus-text">
-                    <h6><center>This section is an easter egg! It is only available for desktop users.</center></h6>
-                    <p><center>Interact to see little Isabela doing her most common activities: working, crafting and having coffee.</center></p>
-                    <p><br></p>
-                </div>
-                <div class="game-container">
-                    <div class="room">
-                        <!-- Character -->
-                        <canvas id="character" class="character"></canvas>
-                        
-                        <!-- Interactive Objects -->
-                        <div class="object computer" data-action="work"></div>
-                        <div class="object coffee-machine" data-action="drink-coffee"></div>
-                        <div class="object book" data-action="read"></div>
+                    <div class="project-info">
+                        <h3>Bloom!</h3>
+                        <p>Interactive To-Do List with relaxing elements for concentration</p>
+                        <ul class="project-tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
                     </div>
-                </div>
-                <center>
-                <h6>(Coffee and Sketching) Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6063">freesound_community</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6063">Pixabay</a></h6>
-                <h6>(Typing) Sound Effect by <a href="https://pixabay.com/users/sarthakraj_308-46659583/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=308455">Sarthak Raj</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=308455">Pixabay</a></h6></center>
-            </div>
-        </section>
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-number">04</span>
-                    <h2>Let's Connect</h2>
-                </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <p>Open to collaborations and innovative projects</p>
-                        <div class="social-links">
-                            <a href="https://github.com/nardisabela" class="social-link" title="GitHub" aria-label="GitHub">
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/isabelans/" class="social-link" title="LinkedIn" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                            </a>
-                            <a href="mailto:nardisabela@gmail.com" class="social-link" title="Email" aria-label="Email">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                            </a>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="img/projects/tarsila.png" alt="Screenshot of Tarsila drawing application" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nardisabela.github.io/tarsila/" class="project-link" aria-label="View Tarsila project">View Live Demo</a>
                         </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tarsila</h3>
+                        <p>Drawing app with multiple creative tools and brushes</p>
+                        <ul class="project-tech">
+                            <li>HTML5 Canvas</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Touch Events</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="img/projects/tagarela.png" alt="Screenshot of the ChatBot Tagarela" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nardisabela.github.io/tagarela/" class="project-link" aria-label="View Tagarela project">View Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tagarela</h3>
+                        <p>ChatBot that answers questions about Brazil</p>
+                        <ul class="project-tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="img/projects/timezone.png" alt="Screenshot of the TimeZone Converter" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nardisabela.github.io/timezone-converter/" class="project-link" aria-label="View TimeZone Converter project">View Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>TimeZone Converter</h3>
+                        <p>A simple timezone converter</p>
+                        <ul class="project-tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="img/projects/password.png" alt="Screenshot of Password Generator" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://nardisabela.github.io/gerador-senha/" class="project-link" aria-label="View Password Generator project">View Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Password Generator</h3>
+                        <p>A simple Password Generator, available in Portuguese</p>
+                        <ul class="project-tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    </br></br>
+    </br></br>
+
+    <!-- ==============================
+         CONTACT SECTION
+    ============================== -->
+    <section id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 id="contact-heading"><span class="text-gradient">Let's Connect</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>Open to collaborations and innovative projects</p>
+                    <div class="social-links">
+                        <a href="https://github.com/nardisabela" class="social-link" title="GitHub" aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/isabelans/" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:nardisabela@gmail.com" class="social-link" title="Email" aria-label="Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+    </br></br>
+    </br></br>
 
-    <!-- Footer -->
+    <!-- ==============================
+         FOOTER
+    ============================== -->
     <footer>
         <div class="container">
             <p>© <span id="year"></span> Isabela Nardi. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Audio Elements (hidden) -->
-    <audio id="clickSound" src="sound/bonus/click.mp3" preload="auto"></audio>
-    <audio id="workSound" src="sound/bonus/typing.mp3" preload="auto"></audio>
-    <audio id="coffeeSound" src="sound/bonus/coffee.mp3" preload="auto"></audio>
-    <audio id="drawSound" src="sound/bonus/draw.mp3" preload="auto"></audio>
-    <audio id="readSound" src="sound/bonus/sketching.mp3" preload="auto"></audio>
-
-    <!-- JavaScript -->
-    <script src="game.js" defer></script>
-    <script src="script.js" defer></script>
+    <!-- ==============================
+         SCRIPTS
+    ============================== -->
+    <script src="script.js"></script>
+    <script>
+        // Auto-update year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
