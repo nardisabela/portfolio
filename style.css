@@ -4,12 +4,12 @@
 :root {
     /* Colors */
     --primary: #7F5AF0;
-    --secondary: #2CB67D;
+    --secondary: #f54281;
     --accent: #FF8E3C;
-    --dark: #0F0F0F;
+    --dark: #545354;
     --light: #F4F4F4;
-    --text: #F4F4F4;
-    --text-light: #C5C5C5;
+    --text: #dbdbdb;
+    --text-light: #dbdbdb;
     --card-bg: rgba(255, 255, 255, 0.05);
     --tag-bg: rgba(127, 90, 240, 0.1);
     --tag-text: var(--primary);
@@ -221,7 +221,7 @@ header {
 /* About Section */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
     gap: var(--space-xl);
     align-items: center;
 }
@@ -252,7 +252,7 @@ header {
     align-items: center;
     width: 120px;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #d4d4d4;
     border-radius: 1rem;
     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
