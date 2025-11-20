@@ -1,48 +1,41 @@
-// Atualiza o ano no footer
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Efeito magnético nos botões
-document.querySelectorAll('.btn-magnetic').forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        btn.style.setProperty('--x', `${x}px`);
-        btn.style.setProperty('--y', `${y}px`);
-    });
-});
-
-// Animação de scroll
-const sections = document.querySelectorAll('.section');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-        }
-    });
+// ===== Scroll-triggered animations =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
 }, { threshold: 0.1 });
+document.querySelectorAll('.content').forEach(el => observer.observe(el));
 
-sections.forEach(section => {
-    observer.observe(section);
+// ===== Parallax background scroll =====
+const parallaxElements = document.querySelectorAll('.parallax');
+window.addEventListener('scroll', () => {
+  parallaxElements.forEach(el => {
+    let offset = window.scrollY;
+    el.style.backgroundPositionY = offset * 0.5 + 'px';
+  });
 });
 
-// Efeito de inclinação nos cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const x = e.offsetX;
-        const y = e.offsetY;
-        const centerX = card.offsetWidth / 2;
-        const centerY = card.offsetHeight / 2;
-        
-        const angleX = (y - centerY) / 20;
-        const angleY = (centerX - x) / 20;
-        
-        card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-    });
+// ===== Navbar show/hide =====
+const navbar = document.getElementById('navbar');
+const scrollSection = document.getElementById('scrollSection');
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= scrollSection.offsetTop) {
+    navbar.classList.add('show');
+  } else {
+    navbar.classList.remove('show');
+  }
 });
+
+// ===== Floating background elements =====
+const totalElements = 30;
+for (let i = 0; i < totalElements; i++) {
+  const el = document.createElement('div');
+  el.classList.add('background-element');
+  el.style.width = 5 + Math.random() * 15 + 'px';
+  el.style.height = el.style.width;
+  el.style.top = Math.random() * 100 + 'vh';
+  el.style.left = Math.random() * 100 + 'vw';
+  el.style.animationDuration = 5 + Math.random() * 10 + 's';
+  el.style.animationDelay = Math.random() * 5 + 's';
+  document.body.appendChild(el);
+}
